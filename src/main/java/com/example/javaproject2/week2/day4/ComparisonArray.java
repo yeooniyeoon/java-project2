@@ -14,5 +14,4 @@ public class ComparisonArray {
         System.out.printf("%d > %d --> %b\n", arr[2], arr[3], arr[2] > arr[3]);
         System.out.println(Arrays.toString(arr));
     }
-
 }

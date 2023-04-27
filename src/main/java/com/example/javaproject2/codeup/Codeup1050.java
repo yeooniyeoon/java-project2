@@ -10,3 +10,4 @@ public class Codeup1050 {
         System.out.println(val1 == val2 ? 1 : 0);
     }
 }
+
