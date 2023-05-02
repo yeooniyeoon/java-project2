@@ -6,7 +6,6 @@ public class Codeup1123 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int celsius = sc.nextInt();
-        float fahrenheit = ((9/5)*celsius)+32;
-        System.out.printf("%.3f\n", fahrenheit);
+        System.out.printf("%.3f\n", 9 / 5.0f * celsius + 32);
     }
 }
