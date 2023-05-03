@@ -20,6 +20,4 @@ public class Codeup1620 {
         }
         System.out.println(sum);
     }
-
-    public static int digitSum()
 }
