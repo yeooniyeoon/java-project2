@@ -19,7 +19,6 @@ public class Codeup1274 {
         */
 
         // 루트 num까지
-        /*
         for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
                 isFactor = "not prime";
@@ -27,9 +26,9 @@ public class Codeup1274 {
             }
         }
         System.out.println(isFactor);
-        */
 
         // num / 2까지
+        /*
         for (int i = 2; i <= num / 2; i++) {
             if (num % i == 0) {
                 isFactor = "not prime";
@@ -37,6 +36,7 @@ public class Codeup1274 {
             }
         }
         System.out.println(isFactor);
+        */
     }
 }
 
