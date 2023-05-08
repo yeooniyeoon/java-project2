@@ -30,4 +30,34 @@ public class ProgrammersPrimeFactorization {
         int[] arr = solution(210);
         System.out.println(Arrays.toString(arr));
     }
+
+
+    // 강사님 코드
+    /*
+    public static void main(String[] args) {
+        int size = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                size++;
+            }
+        }
+
+        int[] answer = new int[size];
+        int dix = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                answer[idx++] = arr[i];
+            }
+        }
+
+        for (int i = 0; i < answer.length; i++) System.out.printf("%d ", answer[i]);
+
+        for (int i = 2; n > 1; i++) {
+            if (n % i == 0) {
+                arr[divisor] = i;
+                n /= i;
+            }
+        }
+        System.out.println(arr);
+    }*/
 }
