@@ -29,9 +29,16 @@ public class User {
         this.age = age;
     }
 
+    public User() {
+    }
+
     public User(String name, String phoneNumber, int age) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.age = age;
+    }
+
+    public boolean isAdult() {
+        return age >= 18;
     }
 }
