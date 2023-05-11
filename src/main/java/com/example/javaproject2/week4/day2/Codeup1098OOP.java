@@ -1,49 +1,42 @@
 package com.example.javaproject2.week4.day2;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Codeup1098OOP {
-    private int[][] arr;
-    private boolean printSeparator;
+    private int[][] board;
 
-    public Codeup1098OOP() {
-        this.arr = new int[5][5];
-        this.printSeparator = true;
+    public Codeup1098OOP(int x, int y) {
+        this.board = board;
     }
 
-    public Codeup1098OOP(boolean printSeparator) {
-        this.arr = new int[5][5];
-        this.printSeparator = printSeparator;
+    public void printArray(int x, int y) {
+        for (int i = 1; i < board.length; i++) {
+            for (int j = 1; j < board[i].length; j++) {
+                System.out.printf("%d ", board[i][j]);
+            }
+            System.out.println("");
+        }
     }
-
-    public Codeup1098OOP(int rowCnt, int colCnt) {
-        this.arr = new int[rowCnt][colCnt];
-    }
-
-    public void setBeam(int l, int d, int x, int y) {
-        for (int i = 0; i < l; i++) {
-            if (d == 0) { // 가로
-                arr[x - 1][y + i - 1] = 1;
-            } else {
-                arr[x + i - 1][y - 1] = 1;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Codeup1098OOP c1098 = new Codeup1098OOP(sc.nextInt(), sc.nextInt());
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            int l = sc.nextInt();
+            int d = sc.nextInt();
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            if (d == 0) {  // d가 0이면 가로, 1이면 세로
+                for (int j = 0; j < l; j++) { // 막대에 의해 가려진 경우 1, 아닌 경우 0
+                    c1098.board[x][y + j] = 1;
+                }
+            } else if (d == 1) {
+                for (int j = 0; j < l; j++) {
+                    c1098.board[x + j][y] = 1;
+                }
             }
         }
-    }
 
-    public void printArr() {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(Arrays.toString(arr[i]));
-        }
-        if(this.printSeparator) System.out.println("---------------");
-    }
-
-    public static void main(String[] args) {
-        Codeup1098OOP c1098 = new Codeup1098OOP(true);
-        c1098.printArr();
-        c1098.setBeam(2, 0, 1, 1);
-        c1098.printArr();
-        c1098.setBeam(4, 1, 2, 5);
-        c1098.printArr();
+        //c1098.printArray(board);
     }
 }
