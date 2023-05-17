@@ -13,11 +13,11 @@ public class Stack1 {
     }
 
     public int pop() {
-        return this.arr[--pointer];
+        if (isEmpty()) throw new EmptyStackException();
+        else return this.arr[--pointer];
     }
 
     public boolean isEmpty() {
-        if (isEmpty()) throw new EmptyStackException();
         return this.pointer == 0;
     }
 
