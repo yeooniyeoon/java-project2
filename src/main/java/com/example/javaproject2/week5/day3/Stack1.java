@@ -1,6 +1,7 @@
 package com.example.javaproject2.week5.day3;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class Stack1 {
 
@@ -16,15 +17,19 @@ public class Stack1 {
     }
 
     public boolean isEmpty() {
+        if (isEmpty()) throw new EmptyStackException();
         return this.pointer == 0;
+    }
+
+    public int peek() {
+        if (isEmpty()) throw new EmptyStackException();
+        return this.arr[pointer - 1];
     }
 
     public static void main(String[] args) {
         Stack1 st = new Stack1();
-        System.out.println(st.isEmpty());
         st.push(10);
-        System.out.println(st.isEmpty());
-        st.pop();
-        System.out.println(st.isEmpty());
+        System.out.println(st.peek());
+        System.out.println(st.peek());
     }
 }
